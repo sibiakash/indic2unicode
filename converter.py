@@ -122,7 +122,7 @@ def kruti_dev_to_unicode(text):
     unconverted = regex.findall(r"[^\u0900-\u097F\u0020-\u007E\s\u0964-\u0965\u0A00-\u0A7F]", result)
     if unconverted:
         unique = set(unconverted)
-        print(f"\n[DEBUG] ⚠️  Unconverted characters detected: {len(unique)} type(s)", file=sys.stderr)
+        print(f"\nUnconverted characters detected: {len(unique)} type(s)", file=sys.stderr)
         for char in sorted(unique)[:10]:
             print(f"  '{char}' (U+{ord(char):04X})", file=sys.stderr)
 
